@@ -128,7 +128,7 @@ def _to_numpy(inf_node, debug=False):
     if isinstance(inf_node, _np.ndarray):
         return inf_node.astype(_np.float32, copy=False)
 
-    # ✅ 你這個 SDK 版本最重要的一行：結果在 .ndarray 裡
+    #  你這個 SDK 版本最重要的一行：結果在 .ndarray 裡
     if hasattr(inf_node, "ndarray"):
         try:
             return _np.asarray(inf_node.ndarray, dtype=_np.float32)
