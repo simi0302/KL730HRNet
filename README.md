@@ -58,6 +58,7 @@ final project HRNet/
 ### 1. 連接設備
 
 確保 KL730 開發板已透過 USB 連接到電腦，並確認設備已被識別。
+
 將要測試的圖片放入plus_python/資料夾下。
 
 ### 2. 基本使用
@@ -224,6 +225,7 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
