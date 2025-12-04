@@ -1,19 +1,4 @@
-# HRNet 人體姿態估計專案
-
-## 專案簡介
-
-本專案實現了基於 **HRNet** 模型的人體姿態估計系統，運行於 **Kneron KL730** 邊緣運算平台。系統能夠從輸入圖片中偵測出人體的 17 個關鍵關節點，並繪製出完整的骨架結構。
-
-### 核心特點
-
-- **邊緣運算**：在 KL730 NPU 上執行，無需 GPU
-- **高精度偵測**：支援 17 個 COCO 格式人體關節點
-- **多種解碼方法**：提供 4 種 heatmap 解碼策略
-- **彩色化視覺化（本專案改進）**：實現彩色關節點、骨架連線、統計資訊面板等視覺化功能，提升結果可讀性
-- **智能路徑處理**：自動尋找韌體和模型檔案
-
-### 專案改進重點
-
+### HRNet彩色關節點系統
 本專案在原始 HRNet 模型的基礎上，針對視覺化部分進行了重要改進：
 
 - **彩色關節點系統**：原本的系統僅提供基本的關節點標示，本專案實現了完整的彩色化視覺化系統
@@ -84,8 +69,6 @@ cd kneopi-examples-main/ai_application/plus_python
 # 執行腳本（使用預設參數）
 python KL730HRNet.py -img test1.jpg
 
-# 或指定 USB 端口
-python KL730HRNet.py -img test1.jpg -p 0
 ```
 
 ### 3. 查看結果
@@ -131,39 +114,6 @@ python KL730HRNet.py -img test1.jpg -p 0
 --show_stats           顯示統計資訊面板 (預設: 開啟)
 --no_stats             不顯示統計資訊面板
 ```
-
-### 使用範例
-
-#### 範例 1：基本使用
-```bash
-python KL730HRNet.py -img test1.jpg
-```
-
-#### 範例 2：使用高精度解碼方法
-```bash
-python KL730HRNet.py -img test1.jpg --detect_method gaussian
-```
-
-#### 範例 3：顯示標籤和分數
-```bash
-python KL730HRNet.py -img test1.jpg --show_labels --show_scores
-```
-
-#### 範例 4：調整視覺化參數
-```bash
-python KL730HRNet.py -img test1.jpg \
-    --point_size 8 \
-    --line_thickness 4 \
-    --thresh 0.3
-```
-
-#### 範例 5：指定檔案路徑
-```bash
-python KL730HRNet.py -img test1.jpg \
-    -fw res/firmware/KL730/kp_firmware.tar \
-    -m res/models/KL730/HRNet/models_730.nef
-```
-
 ---
 
 ## 功能說明
@@ -271,13 +221,6 @@ python KL730HRNet.py -img test1.jpg \
 ### 輸出圖片
 
 - **檔名**：`hrnet_result.jpg`
-- **內容**：
-  - 原始圖片
-  - 17 個彩色關節點
-  - 骨架連線
-  - 統計資訊面板（可選）
-  - 關節點標籤（可選）
-  - 分數顯示（可選）
 
 ---
 
@@ -361,40 +304,10 @@ python KL730HRNet.py -img test1.jpg \
 
 ---
 
-## 作者
-
-大三專題專案
-
----
-
 ## 參考資料
 
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
 
----
-
-## 更新日誌
-
-### v1.0 (2024)
-- 初始版本發布
-- 支援 4 種解碼方法
-- **彩色化視覺化系統**（本專案改進重點）
-  - 實現彩色關節點系統（原本無此功能）
-  - 增強版骨架連線（不同部位不同顏色）
-  - 統計資訊面板（新增功能）
-  - 可選標籤和分數顯示
-- 智能路徑處理
-- 錯誤處理機制
-
----
-
-## 未來擴展
-
-- [ ] 支援批次處理多張圖片
-- [ ] 支援視訊輸入（即時姿態估計）
-- [ ] 支援多人物偵測
-- [ ] 增加更多解碼方法
-- [ ] 優化視覺化效果
 
