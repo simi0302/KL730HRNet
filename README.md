@@ -14,7 +14,7 @@
 
 ### 硬體需求
 - **Kneron KL730** 開發板
-- USB 連接線（建議使用 USB 3.0 Super Speed）
+- USB 連接線（建議 USB 3.0 Super Speed）
 
 ### 軟體需求
 - Python 3.7+
@@ -27,7 +27,6 @@
 ```bash
 pip install kneron-sdk opencv-python numpy
 ```
-
 ---
 
 ## 專案結構
@@ -141,16 +140,6 @@ python KL730HRNet.py -img test1.jpg
 15: left_ankle (左腳踝)
 16: right_ankle (右腳踝)
 ```
-
-### 解碼方法比較
-
-| 方法 | 速度 | 精度 | 適用場景 |
-|------|------|------|----------|
-| **argmax** | 5/5 | 3/5 | 即時應用、速度優先 |
-| **subpixel** | 4/5 | 4/5 | 平衡速度與精度 |
-| **weighted** | 3/5 | 4/5 | 多雜訊場景 |
-| **gaussian** | 2/5 | 5/5 | 高精度需求 |
-
 ### 視覺化特色（本專案改進）
 
 本專案在視覺化方面進行了重要改進，原本的系統僅提供基本的關節點標示，本專案實現了完整的彩色化視覺化系統：
@@ -229,49 +218,6 @@ python KL730HRNet.py -img test1.jpg
 
 ---
 
-## 程式結構
-
-### 主要模組
-
-1. **路徑處理模組**
-   - `_find_kneopi_examples_path()` - 自動尋找專案目錄
-   - `_get_default_firmware_path()` - 自動尋找韌體
-   - `_get_default_model_path()` - 自動尋找模型
-
-2. **工具函數模組**
-   - `_get_model_input_hw()` - 讀取模型輸入尺寸
-   - `_to_numpy()` - 轉換推論結果為 NumPy array
-
-3. **關鍵點解碼模組**（4種方法）
-   - `decode_heatmap_argmax()` - 簡單快速
-   - `decode_heatmap_subpixel_refinement()` - 亞像素優化
-   - `decode_heatmap_weighted_average()` - 加權平均
-   - `decode_heatmap_gaussian_refinement()` - 高斯擬合
-
-4. **視覺化模組**
-   - `draw_keypoints_enhanced()` - 增強版視覺化
-   - `get_skeleton_color()` - 骨架顏色配置
-
-5. **主程式流程**
-   - `main()` - 完整推理流程
-
----
-
-## 技術細節
-
-### 模型規格
-- **輸入尺寸**：256×192（可自動偵測）
-- **輸出格式**：Heatmap (17, H, W)
-- **關節點數量**：17 個（COCO 格式）
-
-### 依賴套件
-- `kp` - Kneron SDK
-- `cv2` (OpenCV) - 圖片處理
-- `numpy` - 數值運算
-- `argparse` - 命令列參數解析
-
----
-
 ## 授權
 
 本專案基於 Kneron 範例程式碼修改，請參考原始授權條款。
@@ -283,6 +229,7 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
