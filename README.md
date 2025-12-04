@@ -162,6 +162,12 @@ python KL730HRNet.py -img test1.jpg
   - 半透明背景設計，不遮擋原始圖片
   - 可選顯示關節點名稱標籤和置信度分數
 
+### 原HRNet
+<img width="699" height="890" alt="image" src="https://github.com/user-attachments/assets/da94cd7e-a1e1-46b5-88e4-70102f96be3e" />
+
+### 本專案改進版HRNet
+<img width="699" height="890" alt="image" src="https://github.com/user-attachments/assets/a778fbed-ba35-4da9-a619-fca33862f903" />
+
 ---
 ### 終端輸出範例
 
@@ -225,6 +231,7 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
