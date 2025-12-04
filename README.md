@@ -33,7 +33,7 @@ pip install kneron-sdk opencv-python numpy
 
 ```
 final project HRNet/
-├── README.md                          # 本文件
+├── README.md                          
 ├── kneopi-examples-main/
 │   └── ai_application/
 │       └── plus_python/
@@ -46,9 +46,9 @@ final project HRNet/
 │           │   │   └── KL730/
 │           │   │       └── HRNet/
 │           │   │           └── models_730.nef
-│           │   └── images/            # 測試圖片
-│           └── utils/                  # SDK 工具函數
-└── models_730.nef                     # 模型檔案（備用位置）
+│           │   └── images/            
+│           └── utils/                  
+└── models_730.nef                     
 ```
 
 ---
@@ -223,6 +223,7 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
