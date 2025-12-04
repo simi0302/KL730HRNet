@@ -10,7 +10,7 @@
 
 ---
 
-## 環境需求
+### 環境需求
 
 ### 硬體需求
 - **Kneron KL730** 開發板
@@ -29,7 +29,7 @@ pip install kneron-sdk opencv-python numpy
 ```
 ---
 
-## 專案結構
+### 專案結構
 
 ```
 final project HRNet/
@@ -53,7 +53,7 @@ final project HRNet/
 
 ---
 
-## 快速開始
+### 快速開始
 
 ### 1. 連接設備
 
@@ -80,11 +80,8 @@ python KL730HRNet.py -img test1.jpg
 
 ---
 
-## 使用說明
+### 使用說明
 
-### 命令列參數
-
-#### 基本參數
 ```bash
 -p, --port_id          USB 端口 ID (預設: 0)
 -fw, --firmware        韌體檔案路徑 (自動尋找)
@@ -115,9 +112,9 @@ python KL730HRNet.py -img test1.jpg
 ```
 ---
 
-## 功能說明
+### 功能說明
 
-### 關節點定義（17個）
+### 關節點定義
 
 系統偵測的 17 個 COCO 格式關節點：
 
@@ -164,9 +161,6 @@ python KL730HRNet.py -img test1.jpg
   - 可選顯示關節點名稱標籤和置信度分數
 
 ---
-
-## 輸出說明
-
 ### 終端輸出範例
 
 ```
@@ -229,6 +223,7 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
