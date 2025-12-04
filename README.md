@@ -224,34 +224,8 @@ python KL730HRNet.py -img test1.jpg
 
 ---
 
-## 常見問題
-
-### Q1: 找不到韌體或模型檔案？
-
-**A:** 程式會自動尋找檔案，如果找不到，請使用 `-fw` 和 `-m` 參數手動指定路徑。
-
-### Q2: USB 連接失敗？
-
-**A:** 
-- 確認 USB 線是否為 USB 3.0
-- 確認設備驅動程式已正確安裝
-- 嘗試不同的 USB 端口
-- 檢查設備是否被其他程式占用
-
-### Q3: 推論結果不準確？
-
-**A:**
-- 嘗試使用不同的解碼方法（`--detect_method`）
-- 調整分數閾值（`--thresh`）
-- 確認輸入圖片品質良好
-- 確認圖片中人物清晰可見
-
-### Q4: 執行速度慢？
-
-**A:**
-- 使用 `argmax` 方法（最快）
-- 確認 USB 速度為 Super Speed
-- 減少圖片解析度
+## 系統架構
+<img width="942" height="768" alt="image" src="https://github.com/user-attachments/assets/0bb69c85-66f2-4426-8ea2-59fc10642e05" />
 
 ---
 
@@ -309,5 +283,6 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
