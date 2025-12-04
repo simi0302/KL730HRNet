@@ -207,22 +207,23 @@ python KL730HRNet.py -img test1.jpg
 
 ---
 
-## 系統架構
+### 系統架構
 <img width="942" height="768" alt="image" src="https://github.com/user-attachments/assets/0bb69c85-66f2-4426-8ea2-59fc10642e05" />
 
 ---
 
-## 授權
+### 授權
 
 本專案基於 Kneron 範例程式碼修改，請參考原始授權條款。
 
 ---
 
-## 參考資料
+### 參考資料
 
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
