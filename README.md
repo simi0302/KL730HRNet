@@ -14,7 +14,6 @@
 
 ### 硬體需求
 - **Kneron KL730** 開發板
-- USB 連接線（建議 USB 3.0 Super Speed）
 
 ### 軟體需求
 - Python 3.7+
@@ -231,6 +230,7 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
