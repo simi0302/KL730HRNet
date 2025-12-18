@@ -1,5 +1,5 @@
 ### HRNet彩色關節點--視覺化改善
-本專案在原始 HRNet 模型的基礎上，針對視覺化部分進行了重要改進：
+本專案在原始 HRNet 模型的基礎上，針對視覺化部分進行了改進：
 
 - **彩色關節點系統**：原本的系統僅提供基本的關節點標示，本專案實現了完整的彩色化視覺化系統
   - 不同身體部位使用不同顏色系（頭部、上半身、下半身分別用不同色系）
@@ -230,6 +230,7 @@ python KL730HRNet.py -img test1.jpg
 - [Kneron 官方文檔](https://www.kneron.com/)
 - [HRNet 論文](https://arxiv.org/abs/1908.07919)
 - [COCO 關鍵點格式](https://cocodataset.org/#format-data)
+
 
 
 
